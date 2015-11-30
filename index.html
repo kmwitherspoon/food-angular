@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather for the Soul</title>
+  <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body ng-app="food">
+  <ng-view>
+  </ng-view>
+
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+  <script type="text/javascript" src="bower_components/moment/moment.js"></script>
+
+  <!-- food module -->
+  <script src="food/food.module.js" charset="utf-8"></script>
+  <script src="food/food.controller.js" charset="utf-8"></script>
+  <script src="food/food.service.js" charset="utf-8"></script>
+
+  <!-- likes module -->
+  <!-- <script src="likes/likes.module.js" charset="utf-8"></script>
+  <script src="likes/likes.controllers.js" charset="utf-8"></script>
+  <script src="likes/likes.services.js" charset="utf-8"></script> -->
+</body>
+</html>

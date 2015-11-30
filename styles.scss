@@ -1,0 +1,31 @@
+body {
+  background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/uploads/141362941583982a7e0fc/abcfbca1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=a4228a91f2bf5bbf5b2b5df2f59c5772), 50% 50% no-repeat;
+  background-size: cover;
+  font-family: 'Amatic SC', cursive;
+}
+
+.home {
+  font-family: 'Amatic SC', cursive;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  h1{
+    font-size: 50px;
+  }
+  h3 {
+    font-size: 35px;
+  }
+  .inputSearch {
+    width: 200px;
+    font-family: 'Amatic SC', cursive;
+    color: black;
+    font-size: 30px;
+  }
+  .searchButton  {
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    width: 200px;
+    background-color: green;
+    color: white;
+  }
+}
