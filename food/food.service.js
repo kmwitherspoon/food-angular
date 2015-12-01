@@ -4,23 +4,21 @@
     .module('food')
     .factory('FoodService', function ($http) {
       var urlOptions = {
-          baseUrl: 'http://api.wunderground.com/api/',
-          apiKey: 'a34d8a417d79f534',
-          // callback: '&callback=JSON_CALLBACK',
-          buildUrl: function (zip) {
-            return this.baseUrl + this.apiKey + '/conditions/q/' + zip + '.json';
-          }
-        };
-        // var buildImgUrl = function (obj) {
-        //   return 'https://farm' + obj.farm + '.staticflickr.com/' + obj.server + '/' + obj.id + '_' + obj.secret + '_z.jpg';
-        // };
-        var getSingleItem = function(item){
+        baseUrl: 'http://api.yummly.com/v1/api/recipes?_app_id=',
+        appid: 'c191f173',
+        apiKey: '232d6f2656512b0a2475ed0804ce85aa',
+        // callback: '&callback=JSON_CALLBACK',
+        buildUrl: function (keyword) {
+          return this.baseUrl + this.appid + '&_app_key=' + this.apiKey + '&q=' + keyword + '&requirePictures=true';
+        }
+      };
+      var getSingleItem = function(item){
         return $http.get(urlOptions.buildUrl()).then(function(data){
           console.log(data.data.results.item);
         })
       };
-      var getItems = function(item){
-        return $http.get(urlOptions.buildUrl(item)).then(function(data){
+      var getItems = function(chicken){
+        return $http.get(urlOptions.buildUrl(chicken)).then(function(data){
           return data.data.results;
         })
       };

@@ -1,8 +1,12 @@
 <div class="home">
-  <h1>Good Weather</h1>
-  <h3>There is no such thing as bad weather, only different kinds of good weather</h3>
+  <h1>Good Food</h1>
+  <h3>Food is essential to life; Therefore, make it good</h3>
       <div class="searchBar">
         <input class="inputSearch" type="text" ng-model='inputBox' placeholder="search">
-        <button ng-click='searchRecipe(inputBox)' class='searchButton'>Search By City</button>
+        <button ng-click='searchRecipe(inputBox)' class='searchButton'>Search By Ingredient</button>
       </div>
+
+      <article ng-repeat='item in items' class=''>
+          <p>{{item.matches.id}}</p>
+      </article>
 </div>

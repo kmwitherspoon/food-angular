@@ -5,13 +5,13 @@
     .controller('FoodController', function($scope, $location, FoodService, $routeParams){
 
       /////THIS GETS ALL STORE DATA/////
-    $scope.searchRecipe = function(zip){
-        FoodService.getItems(zip).then(function(items){
+    $scope.searchRecipe = function(items){
+        FoodService.getItems(items).then(function(items){
         $scope.items = items;
-        $location.path("/recipe");
+        // $location.path("/recipe");
       })
     }
-    FoodService.getItems('29001').then(function(items){
+    FoodService.getItems('chicken').then(function(items){
     $scope.items = items;
   })
 
