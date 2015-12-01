@@ -12,14 +12,27 @@ body {
     font-size: 50px; }
   .home h3 {
     font-size: 35px; }
-  .home .inputSearch {
-    width: 200px;
-    font-family: 'Amatic SC', cursive;
-    color: black;
-    font-size: 30px; }
-  .home .searchButton {
-    font-family: 'Amatic SC', cursive;
-    font-size: 30px;
-    width: 200px;
-    background-color: orange;
-    color: white; }
+  .home .searchBar {
+    margin-bottom: 10px; }
+    .home .searchBar .inputSearch {
+      width: 200px;
+      font-family: 'Amatic SC', cursive;
+      color: black;
+      font-size: 30px; }
+    .home .searchBar .searchButton {
+      font-family: 'Amatic SC', cursive;
+      font-size: 30px;
+      width: 200px;
+      background-color: orange;
+      color: white; }
+
+.matches {
+  display: inline-block;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  padding: 10px; }
+  .matches .items {
+    width: 40%;
+    font-size: 25px;
+    display: inline-block; }
+    .matches .items img {
+      width: 100px; }

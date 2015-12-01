@@ -5,8 +5,13 @@
         <input class="inputSearch" type="text" ng-model='inputBox' placeholder="search">
         <button ng-click='searchRecipe(inputBox)' class='searchButton'>Search By Ingredient</button>
       </div>
+  <div class="matches">
+      <article ng-repeat='item in items' class='items'>
 
-      <article ng-repeat='item in items' class=''>
-          <p>{{item.matches.id}}</p>
+          <a href="#/recipe/{{item.id}}"><img ng-src="{{item.smallImageUrls[0]}}"></a>
+          <p>{{item.recipeName}}</p>
+          <p>Ratng: {{item.rating}} stars</p>
+          <p>Ingredients:<br> {{item.ingredients.join(', ')}}</p>
       </article>
+  </div>
 </div>

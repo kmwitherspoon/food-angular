@@ -15,17 +15,34 @@ body {
   h3 {
     font-size: 35px;
   }
-  .inputSearch {
-    width: 200px;
-    font-family: 'Amatic SC', cursive;
-    color: black;
-    font-size: 30px;
+  .searchBar {
+    margin-bottom: 10px;
+    .inputSearch {
+      width: 200px;
+      font-family: 'Amatic SC', cursive;
+      color: black;
+      font-size: 30px;
+    }
+    .searchButton  {
+      font-family: 'Amatic SC', cursive;
+      font-size: 30px;
+      width: 200px;
+      background-color: orange;
+      color: white;
+    }
   }
-  .searchButton  {
-    font-family: 'Amatic SC', cursive;
-    font-size: 30px;
-    width: 200px;
-    background-color: orange;
-    color: white;
+}
+
+.matches {
+  display: inline-block;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  padding: 10px;
+  .items {
+    width: 40%;
+    font-size: 25px;
+    display: inline-block;
+    img {
+      width: 100px;
+    }
   }
 }

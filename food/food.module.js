@@ -11,15 +11,11 @@
       $routeProvider
         .when('/', {
           templateUrl: 'food/views/home.html',
-          controller: 'FoodController'
+          controller: 'FoodController as foodCtrl'
         })
-        .when('/recipe', {
+        .when('/recipe/{{item.id}}', {
           templateUrl: 'food/views/recipe.html',
-          controller: 'FoodController'
-        })
-        .when('/recipe:id', {
-          templateUrl: 'food/views/recipe.html',
-          controller: 'FoodController'
+          controller: 'FoodController as foodCtrl'
         })
       });
 

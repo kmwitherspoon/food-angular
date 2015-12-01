@@ -14,18 +14,21 @@
       };
       var getSingleItem = function(item){
         return $http.get(urlOptions.buildUrl()).then(function(data){
-          console.log(data.data.results.item);
-        })
+          console.log(data.data.matches.item);
+          return data.data.matches.item;
+        });
       };
       var getItems = function(chicken){
         return $http.get(urlOptions.buildUrl(chicken)).then(function(data){
-          return data.data.results;
-        })
+          console.log(data.data.matches);
+          return data.data.matches;
+
+        });
       };
       return {
         getItems : getItems,
         getSingleItem : getSingleItem
       };
-    })
+    });
 
 })();
