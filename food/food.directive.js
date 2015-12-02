@@ -1,19 +1,21 @@
-// (function () {
-//   "use strict";
-//   angular
-//     .module('flickr')
-//     .directive('nadrow', function () {
-//       return {
-//         restrict: 'EA',
-//         templateUrl: 'flickr/views/nadrow.directive.html',
-//         link: function (scope, element, attributes) {
-//           element.on('click', function (evt) {
-//             element.text(attributes.tochanged);
-//             element.css('background-color', 'red');
-//           });
-//
-//         }
-//       };
-//     });
-//
-// })();
+(function () {
+  "use strict";
+  angular
+    .module('food')
+    .directive('favorite', function () {
+      return {
+        restrict: 'EA',
+        templateUrl: 'food/views/food.directive.html',
+        link: function (scope, element, attributes) {
+          element.on('click', function (evt) {
+            element.find('.favorite');
+            element.css('color', 'red');
+          });
+        },
+        scope: {
+          action: "&"
+        },
+      };
+    });
+
+})();

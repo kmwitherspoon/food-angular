@@ -7,11 +7,11 @@
       </div>
   <div class="matches">
       <article ng-repeat='item in items' class='items'>
-
-          <a href="#/recipe/{{item.id}}"><img ng-src="{{item.smallImageUrls[0]}}"></a>
+          <img ng-src="{{item.smallImageUrls[0]}}">
           <p>{{item.recipeName}}</p>
           <p>Ratng: {{item.rating}} stars</p>
           <p>Ingredients:<br> {{item.ingredients.join(', ')}}</p>
+          <favorite></favorite>
       </article>
   </div>
 </div>
